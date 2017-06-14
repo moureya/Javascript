@@ -14,7 +14,7 @@ console.log(fullAge);
 
 
 // Lecture: Variable Mutation and Type Coercion
-//var name = "John";
+/*var name = "John";
 var age = 26;
 
 //console.log(name +" "+ age);
@@ -41,3 +41,32 @@ console.log(lastName);
 
 alert(name + " is a " + age + " year old "
 + job + ". Is he married? " + isMarried + ".");
+*/
+
+// Lecture: Operators
+/*
+var age = 26;
+var currentYear = 2017;
+var birthYear = currentYear - age;
+console.log(birthYear);
+*/
+
+///////////////////////////////////////////////////
+// Lecture: if/else statements
+
+var name = "John";
+var age = 26;
+var isMarried = "no";
+
+if (isMarried === "yes") {
+  console.log(name + ' is married!');
+} else {
+  console.log(name + ' will hopefully marry soon :)');
+}
+
+isMarried = false;
+if (isMarried) {
+  console.log('YES!');
+} else {
+  console.log('NO');
+}
