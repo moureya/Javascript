@@ -53,7 +53,7 @@ console.log(birthYear);
 
 ///////////////////////////////////////////////////
 // Lecture: if/else statements
-
+/*
 var name = "John";
 var age = 26;
 var isMarried = "no";
@@ -69,4 +69,36 @@ if (isMarried) {
   console.log('YES!');
 } else {
   console.log('NO');
+}
+*/
+
+
+/////////////////////////////////////////////////////////
+// Lecture: Boolean logic and switch
+
+var age = 16;
+
+if (age < 18) {
+  console.log("John is a teenager");
+} else if (age > 17 && age < 30){
+  console.log("John is a young man");
+} else {
+  console.log("John is an adult");
+}
+
+var job = 'teacher';
+
+job = prompt('What does John do?');
+switch (job) {
+  case 'teacher':
+    console.log('John teaches kids.');
+    break;
+  case 'driver':
+    console.log('John drives a cab in Lisbon.');
+    break;
+  case 'cop':
+    console.log('John helps fight crime.');
+    break;
+  default:
+    console.log('John does something else.');
 }
