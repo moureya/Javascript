@@ -75,7 +75,7 @@ if (isMarried) {
 
 /////////////////////////////////////////////////////////
 // Lecture: Boolean logic and switch
-
+/*
 var age = 16;
 
 if (age < 18) {
@@ -102,3 +102,41 @@ switch (job) {
   default:
     console.log('John does something else.');
 }
+*/
+
+var p1Age, p2Age, p3Age
+var p1AgeTimesFive, p2AgeTimesFive, p3AgeTimesFive
+var p1Height, p2Height, p3Height
+var p1Total, p2Total, p3Total
+
+p1Age = prompt ('Player 1, what is your age?');
+p2Age = prompt ('Player 2, what is your age?');
+p3Age = prompt ('Player 3, what is your age?');
+
+p1Height = prompt ('Player 1, what is your height in cm?');
+p2Height = prompt ('Player 2, what is your height in cm?');
+p3Height = prompt ('Player 3, what is your height in cm?');
+
+p1AgeTimesFive = p1Age * 5;
+p2AgeTimesFive = p2Age * 5;
+p3AgeTimesFive = p3Age * 5;
+
++p1Total = +p1AgeTimesFive + +p1Height;
++p2Total = +p2AgeTimesFive + +p2Height;
++p3Total = +p3AgeTimesFive + +p3Height;
+
+if (p1Total > p2Total && p1Total > p3Total) {
+  console.log('Player 1 wins with ' + p1Total +' points!');
+} else if (p2Total > p1Total && p2Total > p3Total) {
+  console.log('Player 2 wins with ' + p2Total +' points!');
+} else if (p3Total > p2Total && p3Total > p1Total) {
+  console.log('Player 3 wins with ' + p3Total +' points!');
+} else if (p1Total = p2Total && p1Total > p3Total) {
+  console.log('Player 1 and player 2 Tied with ' + p2Total + ' points.');
+} else if (p1Total = p3Total && p1Total > p2Total) {
+  console.log('Player 1 and player 3 Tied with ' + p3Total + ' points.');
+} else {
+  console.log('Player 2 and player 3 Tied with ' + p2Total + ' points.');
+}
+
+console.log (p1Age + ' ' + p1AgeTimesFive + ' ' + p1Height +' ' + p1Total);
