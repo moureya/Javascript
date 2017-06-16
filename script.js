@@ -103,28 +103,35 @@ switch (job) {
     console.log('John does something else.');
 }
 */
+// Coding Challenge 1
 
+// Variable Declaration
 var p1Age, p2Age, p3Age
 var p1AgeTimesFive, p2AgeTimesFive, p3AgeTimesFive
 var p1Height, p2Height, p3Height
 var p1Total, p2Total, p3Total
 
+// Set player age
 p1Age = prompt ('Player 1, what is your age?');
 p2Age = prompt ('Player 2, what is your age?');
 p3Age = prompt ('Player 3, what is your age?');
 
+// Set player height
 p1Height = prompt ('Player 1, what is your height in cm?');
 p2Height = prompt ('Player 2, what is your height in cm?');
 p3Height = prompt ('Player 3, what is your height in cm?');
 
+// Multiply player age
 p1AgeTimesFive = p1Age * 5;
 p2AgeTimesFive = p2Age * 5;
 p3AgeTimesFive = p3Age * 5;
 
+// Get player totals
 +p1Total = +p1AgeTimesFive + +p1Height;
 +p2Total = +p2AgeTimesFive + +p2Height;
 +p3Total = +p3AgeTimesFive + +p3Height;
 
+// Game logic
 if (p1Total > p2Total && p1Total > p3Total) {
   console.log('Player 1 wins with ' + p1Total +' points!');
 } else if (p2Total > p1Total && p2Total > p3Total) {
@@ -132,11 +139,9 @@ if (p1Total > p2Total && p1Total > p3Total) {
 } else if (p3Total > p2Total && p3Total > p1Total) {
   console.log('Player 3 wins with ' + p3Total +' points!');
 } else if (p1Total = p2Total && p1Total > p3Total) {
-  console.log('Player 1 and player 2 Tied with ' + p2Total + ' points.');
+  console.log('Player 1 and player 2 Tied with ' + +p2Total + ' points.');
 } else if (p1Total = p3Total && p1Total > p2Total) {
-  console.log('Player 1 and player 3 Tied with ' + p3Total + ' points.');
+  console.log('Player 1 and player 3 Tied with ' + +p3Total + ' points.');
 } else {
-  console.log('Player 2 and player 3 Tied with ' + p2Total + ' points.');
+  console.log('Player 2 and player 3 Tied with ' + +p2Total + ' points.');
 }
-
-console.log (p1Age + ' ' + p1AgeTimesFive + ' ' + p1Height +' ' + p1Total);
