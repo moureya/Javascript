@@ -105,6 +105,7 @@ switch (job) {
 */
 // Coding Challenge 1
 
+/*
 // Variable Declaration
 var p1Age, p2Age, p3Age
 var p1AgeTimesFive, p2AgeTimesFive, p3AgeTimesFive
@@ -145,3 +146,34 @@ if (p1Total > p2Total && p1Total > p3Total) {
 } else {
   console.log('Player 2 and player 3 Tied with ' + +p2Total + ' points.');
 }
+*/
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+//Lecuter: Functions
+
+function calculateAge(yearofBirth) {
+  var age = 2017 - yearofBirth;
+  return age;
+}
+var userName = prompt ('What is your name?');
+var userYear = prompt ('What year were you born?');
+var ageUser = calculateAge(userYear);
+
+console.log(userName + ' is ' + ageUser + ' years old.');
+
+
+function yearsUntilRetirement(name, year) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+
+  if (retirement >= 0) {
+    console.log(name + ' retires in ' + retirement + ' years.')
+  } else {
+    console.log(name + ' is already retired.');
+  }
+
+}
+
+yearsUntilRetirement(userName, userYear);
