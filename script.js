@@ -199,3 +199,31 @@ if (x === 5) {
   //do something
 }
 */
+
+////////////////////////////////////////////////////////////////
+// Lecture: Arrays
+/*
+var names = ['John', 'Jane', 'Mark'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[1]);
+names[1] = 'Ben';
+console.log(names[1]);
+
+var john = ['John', 'Smith', 1990, 'Designer', false];
+
+//.push adds an element to the end of an array
+john.push('Blue');
+//.unshift adds an element to the beginning of an array
+john.unshift('Mr.');
+//.pop removes an element from the end of an array
+john.pop();
+//.shift removes an element from the beginning of an array
+john.shift();
+
+console.log(john);
+
+if (john.indexOf('Teacher') === -1) {
+  console.log('John is NOT a teacher.');
+}
+*/
