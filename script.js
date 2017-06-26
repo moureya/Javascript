@@ -152,7 +152,7 @@ if (p1Total > p2Total && p1Total > p3Total) {
 
 /////////////////////////////////////////////////////////////////////////////////
 //Lecuter: Functions
-
+/*
 function calculateAge(yearofBirth) {
   var age = 2017 - yearofBirth;
   return age;
@@ -177,3 +177,25 @@ function yearsUntilRetirement(name, year) {
 }
 
 yearsUntilRetirement(userName, userYear);
+*/
+
+////////////////////////////////////////////////////////////////////
+//Lecture: Statements and expressions
+/*
+function someFun(par) {
+  //code
+}
+
+var someFun = function(par) {
+  //code
+}
+
+//Expressions
+3 + 4;
+var x = 3;
+
+//Statements
+if (x === 5) {
+  //do something
+}
+*/
