@@ -311,7 +311,7 @@ console.log(john);
 
 /////////////////////////////////////////////////////
 //Lecture:Loops
-
+/*
 for (var i = 0; i < 10; i++) {
   console.log(i);
 }
@@ -348,3 +348,37 @@ for (var i = 1; i < 6; i++) {
 
   console.log(i);
 }
+*/
+
+
+///////////////////////////////////////////////////
+//Project 2
+
+var adultAge = 18;
+var currentYear = 2017;
+var yearBorn_1 = [1965, 1987, 1999, 2005];
+var yearBorn_2 = [1987, 1998, 1989, 2016];
+
+function printFullAge(yearBorn) {
+  var age = [];
+  var adult = [];
+
+  for (var i = 0; i < yearBorn.length; i++) {
+    age[i] = currentYear - yearBorn[i];
+  }
+
+  for (var i = 0; i < yearBorn.length; i++) {
+    if (age[i] < adultAge) {
+      adult[i] = false;
+    }
+    else {
+      adult[i] = true;
+    }
+  }
+  return adult;
+}
+
+var full_1 = printFullAge(yearBorn_1);
+var full_2 = printFullAge(yearBorn_2);
+console.log(full_1);
+console.log(full_2);
