@@ -370,8 +370,7 @@ function printFullAge(yearBorn) {
   for (var i = 0; i < yearBorn.length; i++) {
     if (age[i] < adultAge) {
       adult[i] = false;
-    }
-    else {
+    } else {
       adult[i] = true;
     }
   }
