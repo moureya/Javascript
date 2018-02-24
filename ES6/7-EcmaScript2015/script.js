@@ -449,7 +449,7 @@ console.log(question.get(ans === question.get('correct')));
 //Lecture: Classes
 /*
 //ES5
-var person5 = function(name, yearOfBirth, job) {
+var person5 = function(name, yearOfBirth, job) {m^2
 	this.name = name;
 	this.yearOfBirth = yearOfBirth;
 	this.job = job;
@@ -487,7 +487,7 @@ person6.greeting();
 
 /////////////////////////////////////////////////////
 //Lecture: Classes and Subclasses
-
+/*
 //ES5
 var person5 = function(name, yearOfBirth, job) {
 	this.name = name;
@@ -549,3 +549,105 @@ const johnAthlete6 = new athlete6('John', 1990, 'swimmer', 3, 10);
 
 johnAthlete6.wonMedal();
 johnAthlete6.calcAge();
+*/
+
+/////////////////////////////////
+// CODING CHALLENGE
+
+/*
+
+Suppose that you're working in a small town administration, and you're in charge of two town elements:
+1. Parks
+2. Streets
+
+It's a very small town, so right now there are only 3 parks and 4 streets. All parks and streets have a name and a build year.
+
+At an end-of-year meeting, your boss wants a final report with the following:
+1. Tree density of each park in the town (forumla: number of trees/park area)
+2. Average age of each town's park (forumla: sum of all ages/number of parks)
+3. The name of the park that has more than 1000 trees
+4. Total and average length of the town's streets
+5. Size classification of all streets: tiny/small/normal/big/huge. If the size is unknown, the default is normal
+
+All the report data should be printed to the console.
+
+HINT: Use some of the ES6 features: classes, subclasses, template strings, default parameters, maps, arrow functions, destructuring, etc.
+
+*/
+
+/*
+Needed Params:
+  Parks: trees, area (acres), age, name
+  Streets: length, size
+*/
+
+console.log('---------------PARK STATISTICS---------------');
+//Create park object
+class park {
+	constructor(trees, area, age, name) {
+		this.trees = trees;
+		this.area = area;
+		this.age = age;
+		this.name = name;
+	}
+	//Create function for calculating and displaying tree density
+	treeDensity() {
+		let density = (this.trees / this.area).toFixed(2);
+		console.log('      ' + this.name + ' Park: ' + density + ' trees/acre');
+	}
+}
+//Create array of park objects
+let parks = [
+	(foster = new park(2100, 255, 90, 'Foster')),
+	(buckner = new park(1002, 197.8, 49, 'Buckner')),
+	(lawton = new park(587, 39.33, 152, 'Lawton'))
+];
+console.log(' 1. Density of trees per acre of land');
+parks.forEach(function(item) {
+	item.treeDensity();
+});
+let aveAgeArr = [];
+for (let i = 0; i < parks.length; i++) {
+	aveAgeArr[i] = parks[i].age;
+}
+let aveAgeNum = aveAgeArr.reduce((a, b) => a + b, 0) / aveAgeArr.length;
+let lotsOfTrees = [];
+for (let i = 0; i < parks.length; i++) {
+	if (parks[i].trees > 1000) {
+		lotsOfTrees[i] = parks[i].name;
+	}
+}
+console.log(' 2. The average age of the parks: ' + aveAgeNum + ' years');
+console.log(' 3. Parks with over 1000 trees:');
+lotsOfTrees.forEach(function(item) {
+	console.log('      ' + item + ' Park');
+});
+
+console.log('---------------STREET STATISTICS---------------');
+class street {
+	constructor(streetLength, size = 'normal') {
+		this.streetLength = streetLength;
+		this.size = size;
+	}
+}
+
+let streets = [
+	(first = new street(37, 'big')),
+	(second = new street(98, 'huge')),
+	(third = new street(25)),
+	(fourth = new street(5, 'tiny'))
+];
+
+let totalArr = [];
+for (let i = 0; i < streets.length; i++) {
+	totalArr[i] = streets[i].streetLength;
+}
+
+let total = totalArr.reduce((a, b) => a + b, 0);
+let avg = totalArr.reduce((a, b) => a + b, 0) / totalArr.length;
+console.log(' 4a. The total length of all streets: ' + total + ' mi');
+console.log(' 4b. The average length of all streets: ' + avg + ' mi');
+console.log(' 5. The Length of all streets along with size classification:');
+streets.forEach(function(item) {
+	console.log('      Length: ' + item.streetLength + ' mi, Size: ' + item.size);
+});
